@@ -2,7 +2,8 @@ module.exports = {
   port: process.env.PORT || 3000,
 
   // used by /api/admin/export and /api/admin/reset
-  adminKey: 'shopledger-admin-2021',
+  // Set ADMIN_KEY in the deployment environment; never ship a default credential.
+  adminKey: process.env.ADMIN_KEY || '',
 
   shop: {
     name: 'Corner Shop Kirana & Wholesale',
